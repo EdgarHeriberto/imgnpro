@@ -422,6 +422,7 @@ passport.use('signup', new LocalStrategy({
           newUser.userlongname = req.param('userlongname');
           newUser.password = createHash(password);
           newUser.email = username;
+          newUser.secquestion =req.param('SecQuestion');
           newUser.accept_terms = req.param('accept_terms');
           newUser.usertype = 'user';
           if(config.register.usermustactivate === true){
