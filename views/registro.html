@@ -262,7 +262,17 @@
                         <input type="password" name="password" id="password1"  placeholder="Contraseña" required>
                         <input type="password" name="confirmpass"  id="confirmpass" oninput="check(this, 'password1', 'La contraseña no coincide')" placeholder="Confirmar Contraseña" required>
                         <br>
-                        <input type="text" name="SecQuestion" placeholder="Pregunta de seguridad" required>
+                            <select name="SecQuestion" required>
+                                 <option value="0">ELige una pregunta de  seguridad </option>
+                                 <option value="1">¿lugar de nacimiento?</option> 
+                                 <option value="2">¿mascota favorita?</option> 
+                                 <option value="3">¿personaje historico favorito?</option>
+                                 <option value="10">¿grupo o banda musical favorito?</option> 
+                                 <option value="11">¿sistema operativo favorito?</option> 
+                                 <option value="12">¿frase historica favorita? </option> 
+                            </select>
+                        <br>
+                        <input type="text" name="SecAnswer" placeholder="Pregunta de seguridad" required>
                         <br>
                         <br>
                         <input type="checkbox" name="accept_terms" required><label class="postcheck">Acepto los <a class="terms" href="../pdfs/tems.pdf" target="_blank">Términos y Condiciones de IMGNpro</a>.</label>
