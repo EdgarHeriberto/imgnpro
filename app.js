@@ -353,7 +353,7 @@ passport.use('login', new LocalStrategy({
   function(req,username, password, done) { 
     // check in mongo if a user with username exists or not
     User.findOne({ 'email' :  username }, 
-     User.findOne({ 'SecQuestion' },
+     { 'SecQuestion' },
       console.log('imprime la pregunta');
       console.log(SecQuestion);
       function(err, user) {
