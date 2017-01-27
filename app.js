@@ -353,9 +353,6 @@ passport.use('login', new LocalStrategy({
   function(req,username, password, done) { 
     // check in mongo if a user with username exists or not
     User.findOne({ 'email' :  username }, 
-     { 'SecQuestion' },
-      console.log('imprime la pregunta');
-      console.log(SecQuestion);
       function(err, user) {
         // In case of any error, return using the done method
 
