@@ -353,6 +353,9 @@ passport.use('login', new LocalStrategy({
   function(req,username, password, done) { 
     // check in mongo if a user with username exists or not
     User.findOne({ 'email' :  username }, 
+     User.findOne({ 'SecQuestion' },
+      console.log('imprime la pregunta');
+      console.log(SecQuestion);
       function(err, user) {
         // In case of any error, return using the done method
 
@@ -375,8 +378,6 @@ passport.use('login', new LocalStrategy({
         // User exists but wrong password, log the error 
         if (!isValidPassword(user, password)){
           console.log('Contraseña inválida');
-          console.log('imprime contraseña');
-          console.log(password);
           return done(null, false, req.flash('message', 'Contraseña inválida.'));
         }
         // User exists but is disabled, log the error 
@@ -508,8 +509,6 @@ passport.use('de_login', new LocalStrategy({
         // User exists but wrong password, log the error 
         if (!isValidPassword(user, password)){
           console.log('Contraseña inválida');
-          console.log('imprime contraseña');
-          console.log(password);
           return done(null, false, req.flash('message', 'Contraseña inválida.'));
         }
         // User exists but is disabled, log the error 
