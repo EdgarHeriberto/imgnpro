@@ -506,6 +506,8 @@ passport.use('de_login', new LocalStrategy({
         // User exists but wrong password, log the error 
         if (!isValidPassword(user, password)){
           console.log('Contraseña inválida');
+          console.log('imprime contraseña');
+          console.log(password);
           return done(null, false, req.flash('message', 'Contraseña inválida.'));
         }
         // User exists but is disabled, log the error 
