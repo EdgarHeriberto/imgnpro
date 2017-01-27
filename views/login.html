@@ -61,6 +61,8 @@
             function check(input,input2) {
                 if (input.value != document.getElementById(input2).value) {
                     input.setCustomValidity('La contraseña no coincide.');
+                console.log('imprime contraseña');
+                console.log(input.value);
                 } else {
                     // input is valid -- reset the error message
                     input.setCustomValidity('');
