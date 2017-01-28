@@ -520,6 +520,24 @@ passport.use('de_login', new LocalStrategy({
     );
 }));
 
+
+//de prueba
+passport.use('de_login', new LocalStrategy({
+    passReqToCallback : true,
+    usernameField: 'email'
+   },
+  function(req,username, password, done) { 
+    // check in mongo if a user with username exists or not
+    User.find({SecQuestion:}).toArray(function(err, items) {
+    if (err) {
+      console.log(' Error: al acceder prro: ', err);
+    } else {
+      console.log('se pudo',items);
+    }
+       
+});
+//////////////////////////////////////////////////////
+
 passport.use('de_signup', new LocalStrategy({
     passReqToCallback : true,
     usernameField: 'email'
