@@ -422,8 +422,6 @@ passport.use('signup', new LocalStrategy({
           newUser.userlongname = req.param('userlongname');
           newUser.password = createHash(password);
           newUser.email = username;
-          newUser.SecQuestion = req.param('SecQuestion');
-          newUser.SecAnswer = req.param('SecAnswer');
           newUser.accept_terms = req.param('accept_terms');
           newUser.usertype = 'user';
           if(config.register.usermustactivate === true){
@@ -548,8 +546,6 @@ passport.use('de_signup', new LocalStrategy({
           newUser.userlongname = req.param('userlongname');
           newUser.password = createHash(password);
           newUser.email = username;
-          newUser.SecQuestion = req.param('SecQuestion'); 
-          newUser.SecAnswer = req.param('SecAnswer'); 
           newUser.accept_terms = req.param('accept_terms');
           newUser.usertype = 'designer';
           if(config.register.designermustactivate === true){

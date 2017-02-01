@@ -5,8 +5,6 @@ var userSchema = mongoose.Schema({
     username: String,
     password: String,
     email: String,
-    SecQuestion: String,
-    SecAnswer: String,
     accept_terms: Boolean,
     name: String,
     provider: String,
