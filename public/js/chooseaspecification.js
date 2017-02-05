@@ -20,8 +20,6 @@ $(document).ready(function(){
                         $('input:checkbox[name=dpinone]').prop('checked',false);
                     }
                     desactAllNext();
-                    //$('#marco').removeClass(currentClassName).addClass(currentAlignHor);  
-                    //$('#' + currentAlignHor).prop("checked", true);
                 }
                 if (v_typespec == 'free'){
 
@@ -57,40 +55,7 @@ $(document).ready(function(){
                     }
                     ev.preventDefault();
                 });
-                // $("#imageForm input[name=image]").change(function(){
-                //     var imageselected = $('input:radio[name=image]:checked').val();
-                //     localStorage.setItem("imageselected", imageselected);
-                // });
-
-                // var buttonspec = $('#buttonspec');
-                // var frm = $('#specForm');
-                // buttonspec.click(function (ev) {
-                //     $.ajax({
-                //         type: frm.attr('method'),
-                //         url: frm.attr('action'),
-                //         data: frm.serialize(),
-                //         success: function (data) {
-                //             if (data.error == 1 ){
-                //                 document.getElementById('res_message').innerHTML= data.message;    
-                //             }
-                //             else{
-                //                 setTimeout(window.location='/subirimagen4.html',500);
-                //             }
-                //         }
-                //     });
-                //     ev.preventDefault();
-                // });  
-//$( "#myselect option:selected" ).text();
-
-//                $("#background").change(function() {
-//                    if($("#background option:selected").text() ==='COLOR' ){
-//                        $('#colorselect').prop("disabled", false);
-//                      }
-//                    else{
-//                       $('#colorselect').prop("value", '#ffffff');
-//                       $('#colorselect').prop("disabled", true);
-//
-//                    }
+              
                 $("#background").change(function() {
                     if($("#background option:selected").text() ==='COLOR' ){
                         $('#colorselect').prop("disabled", false);
@@ -111,7 +76,7 @@ $(document).ready(function(){
                 });
                 $("#format").change(function() {
 
-                    //alert( $("#format option:selected").text());
+                  
                       $('#sin_fondo').prop("disabled", false);
                       $('#mode_cmyk').prop("disabled", false);
                       if($("#format option:selected").text() ==='JPG' || $("#format option:selected").text() ==='JPG WEB' ){
@@ -131,7 +96,6 @@ $(document).ready(function(){
 
               function desactForm(formName){
                     $('#div_msgDemo').show();
-                    //$('#' + formName).find('input, textarea, button, select').prop('disabled',true);
                     $('#specname').prop('disabled',true);
                } 
 

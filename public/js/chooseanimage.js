@@ -1,21 +1,18 @@
 
- $(document).ready(function(){
-
+$(document).ready(function(){
                 var v_specname = localStorage.getItem("specname");
                 var v_typespec = localStorage.getItem("typespec");
-                //var v_specid = localStorage.getItem("specid");
 
+                var dom_typespec = $("#dom_typespec").val();
+                var dom_specname = $("#dom_specname").val();
                 localStorage.clear(); // limpia el localstorage
-                localStorage.setItem("specname", '<%= specname %>');
-                localStorage.setItem("typespec", '<%= typespec %>');
-                //localStorage.setItem("specid", '<%= specid %>');
-
+                localStorage.setItem("specname", dom_specname);
+                localStorage.setItem("typespec", dom_typespec);
                 if (v_typespec == 'free'){
                     localStorage.setItem("specname", v_specname);
                     localStorage.setItem("typespec", v_typespec);
-                    //localStorage.setItem("specid", v_specid);
                 }
-                if ('<%= typespec %>' == 'normal'){
+                if (dom_typespec == 'normal'){
                     localStorage.clear();
                 }
 
@@ -31,7 +28,6 @@
                 });
                 $("#imageForm input[name=image]").change(function(){
                     var imageselected = $('input:radio[name=image]:checked').val();
-                    //var imageselected = $('input:radio[name=image]:checked').attr('src');
                     localStorage.setItem("imageselected", imageselected);
                 });
                 
