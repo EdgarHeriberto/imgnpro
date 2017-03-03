@@ -1,5 +1,5 @@
-
-$(document).ready(function(){
+ 
+ $(document).ready(function(){
 
                 var strspecname = localStorage.getItem("specname");
                 var v_typespec = localStorage.getItem("typespec");
@@ -55,7 +55,7 @@ $(document).ready(function(){
                     }
                     ev.preventDefault();
                 });
-              
+               
                 $("#background").change(function() {
                     if($("#background option:selected").text() ==='COLOR' ){
                         $('#colorselect').prop("disabled", false);
@@ -76,7 +76,6 @@ $(document).ready(function(){
                 });
                 $("#format").change(function() {
 
-                  
                       $('#sin_fondo').prop("disabled", false);
                       $('#mode_cmyk').prop("disabled", false);
                       if($("#format option:selected").text() ==='JPG' || $("#format option:selected").text() ==='JPG WEB' ){

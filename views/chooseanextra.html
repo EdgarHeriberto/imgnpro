@@ -8,9 +8,7 @@
         <script src="../js/google.js"></script>
         <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
         <script src="../js/general.js"></script>
-           <!--  Se movio el script a un archivo js  -->
         <script src="../js/chooseanextra.js"></script>
-
 
     </head>
     <body>
@@ -82,12 +80,6 @@
             <a id="savebuttonspec" href="">Continuar</a>
         </div>
     </section>
-
-<!-- <input class="checks" type="checkbox" name="correctcolor" value=<%= config.prices.correctcolor %>><span class="postinput">Corrección de Color</span>
-                <input  class="checks" type="checkbox" name="clippingpath" value=<%= config.prices.clippingpath %>><span class="postinput">Clipping Path</span>
-                <input  class="checks" type="checkbox" name="basicretouch" value=<%= config.prices.basicretouch %>><span class="postinput"> Retoque Básico</span>
-                <br> -->
-
 
         <!--MODAL PARA SOMBRA-->
         <div id="openShadowModal" class="modalDialog">
@@ -253,6 +245,6 @@
             <a href="/faq">Ver más</a> 
             </div>
         </aside>
-     <input id="configpricescutandremove" name="shadow" type="hidden" value = <%= config.prices.cutandremove %>>
+       <input id="configpricescutandremove" name="shadow" type="hidden" value=<%= config.prices.cutandremove %>>
     </body>
 </html>

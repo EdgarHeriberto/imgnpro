@@ -1,10 +1,9 @@
 
-     $(document).ready(function(){
+ $(document).ready(function(){
                 var newbuttonspec = $('#savebuttonspec');
                 var v_typespec = localStorage.getItem("typespec");
                 var iniformat = localStorage.getItem("format");
                 if(iniformat ==='jpg_web' || iniformat ==='png'){
-                    //$('#cuadroxtra4').prop('disabled',true);
                     $('#a_cuadroxtra4').prop('href','#');
                     $('#a_cuadroxtra4').click(function(){
                         alert('Las imágenes JPG WEB ó PNG no permiten la opción de Clipping Path');
@@ -46,7 +45,6 @@
                     }
                     var alignhor = localStorage.getItem('alignhor');
                     var alignver = localStorage.getItem('alignver');
-                    //var alignnone = localStorage.getItem('alignnone');
                     if (localStorage.getItem('marginnone') === 'none'){
                         localStorage.removeItem('marginmeasure');
                         localStorage.removeItem('margintop');
@@ -92,16 +90,15 @@
                             data: { 'specInfos': JSON.stringify(specInfos)},
                             success: function (data) {
                                 if (data.error == 1 ){
-                                    //document.getElementById('res_message').innerHTML= data.message;    
+                                 
                                     alert(data.message);
                                      $('#specnombre').focus();
                                 }
                                 else{
-                                    //setTimeout(window.location='/subirimagen4.html',500);
-                                    //Se quitó este mensaje para poner Bread toast  alert(data.message);
+                                   
                                     if (data.freeSpecid){
                                         
-                                        //Se quitó este mensaje para poner Bread toast alert("Ahora puedes subir tus 3 imágenes GRATIS");
+                                      
                                         document.location.href="/uploadimages/" + data.freeSpecid;
                                     }
                                     else
@@ -120,9 +117,6 @@
                 }); 
 
                 if (typeof(Storage) !== "undefined") {
-                    // Code for localStorage/sessionStorage.
-                    // TODO si ya existe la variable no sobreescribirla
-                    //localStorage.setItem("imagesize", "none");
                     var lblnameSpec = $('#nameSpec');
 
                     lblnameSpec.html(localStorage.getItem('specname'));
@@ -140,8 +134,7 @@
                     if ( shadowsel.prop('id') ==='dropshadow'){
                         localStorage.setItem('dropshadow',shadowsel.val());
                     }
-                    //ev.preventDefault();
-                    //window.location='#close';
+                 
                     sumallextras();
                 });
 
@@ -151,7 +144,7 @@
                     if ( correctcolor.prop('id') ==='correctcolor'){
                         localStorage.setItem('correctcolor',correctcolor.val());
                     }
-                    //window.location='#close';
+            
                     sumallextras();
                 });
                $("#buttonretouch").click(function(){
@@ -160,7 +153,7 @@
                     if ( basicretouch.prop('id') ==='basicretouch'){
                         localStorage.setItem('basicretouch',basicretouch.val());
                     }
-                    //window.location='#close';
+                  
                     sumallextras();
                 });
                $("#buttonpath").click(function(){
@@ -170,7 +163,7 @@
                         localStorage.setItem('clippingpath',clippingpath.val());
                     }
                     
-                    //window.location='#close';
+                  
                     sumallextras();
                 });
                 
@@ -182,15 +175,13 @@
                 function sumallextras(){
                     var v_typespec = localStorage.getItem("typespec");
                     if (v_typespec !== 'free'){
-
-
- //--------------------------------variable verificada -------------------------------------------------------------------------------------------          
-                        var ntotal = $('#configpricescutandremove').val();
+                                   
+                        var ntotal = $('#configpricescutandremove').val(); 
                         ntotal = ntotal * 100;
 
                         
                         if(localStorage.getItem('naturalshadow')!== null){
-                            //alert("naturalshadow");  
+                            
                              ntotal = ntotal + (localStorage.getItem('naturalshadow') * 100);
                         }
 

@@ -1,5 +1,4 @@
-
-$(document).ready(function(){
+ $(document).ready(function(){
                 $('#buttoncont').click(function (ev) {
                     var imagesize = localStorage.getItem('imagesize');
                     if (imagesize=== null){
@@ -21,15 +20,12 @@ $(document).ready(function(){
                 });
 
                 if (typeof(Storage) !== "undefined") {
-                    // Code for localStorage/sessionStorage.
-                    // TODO si ya existe la variable no sobreescribirla
                     localStorage.setItem("imagesize", "none");
                 } else {
                     alert("Este navegador no soporta LocalStorage");
                 } 
 
                $("#sizeForm input[name='size']").click(function(){
-                    //alert('Diste clic en una opción!');
                     localStorage.imagesize = $('input:radio[name=size]:checked').val();
                 });
             });

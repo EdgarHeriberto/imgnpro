@@ -1,4 +1,4 @@
-
+ 
  $(document).ready(function(){
                 // Desactivar las opciones de alineación 
                 desactAllNext();
@@ -38,8 +38,6 @@
                             $('#chkalgnnone').prop('checked',false);
                         }
                         desactAllNext();
-                        //$('#marco').removeClass(currentClassName).addClass(currentAlignHor);  
-                        //$('#' + currentAlignHor).prop("checked", true);
                     }
                     else{
                         localStorage.setItem("alignnone", 'none');
@@ -50,8 +48,6 @@
                     alert("Este navegador no soporta LocalStorage");
                 } 
                 $("#alignForm1 input[name='alignhor']").click(function(){
-                    //alert('Diste clic en una opción horizontal!');
-                    // localStorage.imagesize = $('input:radio[name=size]:checked').val();
                     var currentClassName = $('#marco').attr('class');
                     var newClassName = $('input:radio[name=alignhor]:checked').val();
                     $('#marco').removeClass(currentClassName).addClass(newClassName);  
@@ -59,8 +55,6 @@
                     
                 });
                 $("#alignForm1 input[name='alignver']").click(function(){
-                    //alert('Diste clic en una opción vertical!');
-                    // localStorage.imagesize = $('input:radio[name=size]:checked').val();
                     var currentClassName = $('#imgportaimage').attr('class');
                     var newClassName = $('input:radio[name=alignver]:checked').val();
                     $('#imgportaimage').removeClass(currentClassName).addClass(newClassName);
